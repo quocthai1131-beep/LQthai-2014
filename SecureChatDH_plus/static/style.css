@@ -1,0 +1,4 @@
+body{font-family:Segoe UI,Arial;background:#f2f4f7}
+.chat-container{background:#fff;padding:20px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.06);}
+input{padding:8px;border:1px solid #ccc;border-radius:6px}
+button{padding:8px 12px;border-radius:6px;border:0;background:#5b9bd5;color:#fff}

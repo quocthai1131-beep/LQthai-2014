@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secure Chat Plus</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    .form-row{display:flex;gap:8px;margin-bottom:8px}
+    .chat-container{max-width:720px;margin:28px auto;padding:18px;border-radius:8px;background:#fff}
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <h2>Secure Chat Form (ECDH + AES)</h2>
+
+    <div id="setup">
+      <div class="form-row">
+        <input id="nickname" placeholder="Nickname" />
+        <input id="room" placeholder="Room (e.g., main)" />
+        <button id="connectBtn" onclick="connect()">Connect</button>
+      </div>
+      <div id="status">Not connected</div>
+    </div>
+
+    <div id="chat" style="display:none">
+      <div id="chat-box" style="height:320px;overflow:auto;border:1px solid #ddd;padding:8px;margin-bottom:8px"></div>
+      <div class="form-row">
+        <input id="msg-input" placeholder="Type message..." />
+        <button id="sendBtn" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/chat_plus.js"></script>
+</body>
+</html>
