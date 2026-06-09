@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Chat (Web DH + AES)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <h2>Secure Web Chat System</h2>
+        <div id="status" class="status-waiting">Đang khởi tạo cặp khóa mật mã ECDH...</div>
+        
+        <div id="chat-box" class="chat-box"></div>
+        
+        <div class="input-area">
+            <input type="text" id="msg-input" placeholder="Nhập tin nhắn bảo mật..." disabled />
+            <button id="send-btn" onclick="sendMessage()" disabled>Gửi Tin</button>
+        </div>
+    </div>
+
+    <script src="/static/chat.js"></script>
+</body>
+</html>
